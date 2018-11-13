@@ -1,0 +1,25 @@
+{
+  "name": "drop-phishing",
+  "version": "1.0.0",
+  "description": "It's an example of how to drop a phishing site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvendrame/drop-phishing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvendrame/drop-phishing/issues"
+  },
+  "homepage": "https://github.com/lvendrame/drop-phishing#readme",
+  "dependencies": {
+    "dev-util": "0.0.3",
+    "faker": "^4.1.0",
+    "node-fetch": "^2.3.0",
+    "strict-uri-encode": "^2.0.0"
+  }
+}
