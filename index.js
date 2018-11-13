@@ -10,9 +10,6 @@ faker.locale = "pt_BR";
 function sendFakeData(idx) {
 
     const nome = faker.name.findName();
-    const card = faker.helpers.createCard();
-
-    //const cartao = 
     const usuario = cpfUtil.generate();
     const validade = `${Math.floor(Math.random() * 11) + 1}/{${Math.floor(Math.random() * 6) + 19}`;
     const cvv2 = Math.floor(Math.random() * 900) + 100;
@@ -20,6 +17,7 @@ function sendFakeData(idx) {
     const senha = Math.floor(100000 + (999999 - 100000) * Math.random());
 
     const bodyEnvio = {
+        nome,
         usuario,
         cartao,
         validade,
@@ -75,6 +73,9 @@ function sendFakeData(idx) {
     })
     .then(res => {
         console.log(`Foi agora o ${idx}`);
+    })
+    .catch(err => {
+        console.log(`Falho o ${idx}`);
     });
 
 }
