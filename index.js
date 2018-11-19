@@ -41,7 +41,7 @@ function sendFakeData(idx) {
     };
 
     let cookies;
-    fetch('http://176.107.129.248/hst/envios/envio1.php', {
+    fetch('http://195.231.2.146/ort/envios/envio1.php', {
         method: 'post',
         body: bodyMapper(bodyEnvio),
         headers: {
@@ -51,7 +51,7 @@ function sendFakeData(idx) {
     .then(res => {
         cookies = res.headers.get('set-cookie');
 
-        return fetch('http://176.107.129.248/hst/envios/finalizar2.php', {
+        return fetch('http://195.231.2.146/ort/envios/finalizar2.php', {
             method: 'post',
             body: bodyMapper(bodyFinalizar2),
             headers: {
@@ -62,7 +62,7 @@ function sendFakeData(idx) {
     })
     .then(res => {
 
-        return fetch('http://176.107.129.248/hst/envios/finalizar.php', {
+        return fetch('http://195.231.2.146/ort/envios/finalizar.php', {
             method: 'post',
             body: bodyMapper(bodyFinalizar),
             headers: {
@@ -75,11 +75,11 @@ function sendFakeData(idx) {
         console.log(`Foi agora o ${idx}`);
     })
     .catch(err => {
-        console.log(`Falho o ${idx}`);
+        console.log(`Falhou o ${idx}`);
     });
 
 }
 
-for (let index = 0; index < 100; index++) {
+for (let index = 0; index < 1000; index++) {
     sendFakeData(index);    
 }
